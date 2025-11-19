@@ -53,9 +53,9 @@ namespace IFSPStore.app.Infra
             #endregion
 
             #region Forms
-            services.AddScoped<Login, Login>();
-            services.AddScoped<CategoryForm, CategoryForm>();
-            services.AddScoped<UserForm, UserForm>();
+            services.AddTransient<Login, Login>();
+            services.AddTransient<CategoryForm, CategoryForm>();
+            services.AddTransient<UserForm, UserForm>();
             #endregion
 
             services.AddSingleton(

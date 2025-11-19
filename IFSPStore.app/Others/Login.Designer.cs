@@ -32,6 +32,7 @@
             txtPassword = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             btnOk = new ReaLTaiizor.Controls.MaterialButton();
             btnCancel = new ReaLTaiizor.Controls.MaterialButton();
+            btnSignUp = new ReaLTaiizor.Controls.MaterialButton();
             SuspendLayout();
             // 
             // txtLogin
@@ -61,7 +62,7 @@
             txtLogin.Size = new Size(250, 48);
             txtLogin.TabIndex = 0;
             txtLogin.TabStop = false;
-            txtLogin.TextAlign = HorizontalAlignment.Left;
+            txtLogin.TextAlign = HorizontalAlignment.Center;
             txtLogin.TrailingIcon = null;
             txtLogin.UseSystemPasswordChar = false;
             // 
@@ -92,7 +93,7 @@
             txtPassword.Size = new Size(250, 48);
             txtPassword.TabIndex = 1;
             txtPassword.TabStop = false;
-            txtPassword.TextAlign = HorizontalAlignment.Left;
+            txtPassword.TextAlign = HorizontalAlignment.Center;
             txtPassword.TrailingIcon = null;
             txtPassword.UseSystemPasswordChar = false;
             // 
@@ -138,11 +139,33 @@
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancelar_Click;
             // 
+            // btnSignUp
+            // 
+            btnSignUp.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnSignUp.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnSignUp.Depth = 0;
+            btnSignUp.HighEmphasis = true;
+            btnSignUp.Icon = null;
+            btnSignUp.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            btnSignUp.Location = new Point(46, 224);
+            btnSignUp.Margin = new Padding(4, 6, 4, 6);
+            btnSignUp.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            btnSignUp.Name = "btnSignUp";
+            btnSignUp.NoAccentTextColor = Color.Empty;
+            btnSignUp.Size = new Size(77, 36);
+            btnSignUp.TabIndex = 4;
+            btnSignUp.Text = "Sign Up";
+            btnSignUp.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnSignUp.UseAccentColor = false;
+            btnSignUp.UseVisualStyleBackColor = true;
+            btnSignUp.Click += btnSignUp_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(342, 284);
+            Controls.Add(btnSignUp);
             Controls.Add(btnCancel);
             Controls.Add(btnOk);
             Controls.Add(txtPassword);
@@ -150,6 +173,7 @@
             MaximizeBox = false;
             Name = "Login";
             Text = "IFSP Store - Login";
+            Enter += btnOk_Click;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -160,5 +184,6 @@
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtPassword;
         private ReaLTaiizor.Controls.MaterialButton btnOk;
         private ReaLTaiizor.Controls.MaterialButton btnCancel;
+        private ReaLTaiizor.Controls.MaterialButton btnSignUp;
     }
 }

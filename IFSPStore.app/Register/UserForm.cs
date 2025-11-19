@@ -31,10 +31,13 @@ namespace IFSPStore.app.Register
             {
                 if (IsEditMode)
                 {
-                    int.TryParse(txtId.Text, out var id);
-                    var user = _userService.GetById<User>(id);
-                    FormToObject(user);
-                    user = _userService.Update<User, User, UserValidator>(user);
+                    if(int.TryParse(txtId.Text, out var id)) 
+                    { 
+                        var user = _userService.GetById<User>(id);
+                        FormToObject(user);
+                        user = _userService.Update<User, User, UserValidator>(user);
+                    }
+                    
                 }
 
                 else

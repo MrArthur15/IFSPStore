@@ -1,6 +1,9 @@
-﻿using IFSPStore.Domain.Base;
+﻿using IFSPStore.app.Infra;
+using IFSPStore.app.Register;
+using IFSPStore.Domain.Base;
 using IFSPStore.Domain.Entities;
 using IFSPStore.Service.Validatorrs;
+using Microsoft.Extensions.DependencyInjection;
 using ReaLTaiizor.Forms;
 
 
@@ -67,5 +70,10 @@ namespace IFSPStore.app.Others
             Environment.Exit(0);
         }
 
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            var form = ConfigureDI.serviceProvider!.GetService<UserForm>();
+            form.ShowDialog();
+        }
     }
 }

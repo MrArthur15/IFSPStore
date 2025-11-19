@@ -136,7 +136,7 @@
             txtEmail.Depth = 0;
             txtEmail.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtEmail.HideSelection = true;
-            txtEmail.Hint = "Emal";
+            txtEmail.Hint = "Email";
             txtEmail.LeadingIcon = null;
             txtEmail.Location = new Point(457, 19);
             txtEmail.MaxLength = 32767;
@@ -168,12 +168,12 @@
             txtPassword.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtPassword.HideSelection = true;
             txtPassword.Hint = "Password";
-            txtPassword.LeadingIcon = null;
+            txtPassword.LeadingIcon = Properties.Resources.baseline_fingerprint_black_24dp;
             txtPassword.Location = new Point(471, 83);
             txtPassword.MaxLength = 32767;
             txtPassword.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtPassword.Name = "txtPassword";
-            txtPassword.PasswordChar = '\0';
+            txtPassword.PasswordChar = '*';
             txtPassword.PrefixSuffixText = null;
             txtPassword.ReadOnly = false;
             txtPassword.RightToLeft = RightToLeft.No;
@@ -223,7 +223,7 @@
             txtId.Name = "txtId";
             txtId.PasswordChar = '\0';
             txtId.PrefixSuffixText = null;
-            txtId.ReadOnly = false;
+            txtId.ReadOnly = true;
             txtId.RightToLeft = RightToLeft.No;
             txtId.SelectedText = "";
             txtId.SelectionLength = 0;
@@ -254,7 +254,7 @@
             txtRegistrationDate.Name = "txtRegistrationDate";
             txtRegistrationDate.PasswordChar = '\0';
             txtRegistrationDate.PrefixSuffixText = null;
-            txtRegistrationDate.ReadOnly = false;
+            txtRegistrationDate.ReadOnly = true;
             txtRegistrationDate.RightToLeft = RightToLeft.No;
             txtRegistrationDate.SelectedText = "";
             txtRegistrationDate.SelectionLength = 0;
@@ -285,7 +285,7 @@
             txtLoginDate.Name = "txtLoginDate";
             txtLoginDate.PasswordChar = '\0';
             txtLoginDate.PrefixSuffixText = null;
-            txtLoginDate.ReadOnly = false;
+            txtLoginDate.ReadOnly = true;
             txtLoginDate.RightToLeft = RightToLeft.No;
             txtLoginDate.SelectedText = "";
             txtLoginDate.SelectionLength = 0;

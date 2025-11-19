@@ -27,10 +27,12 @@ namespace IFSPStore.app.Register
             {
                 if (IsEditMode)
                 {
-                    int.TryParse(txtId.Text, out var id);
-                    var category = _categoryService.GetById<Category>(id);
-                    FormToObject(category);
-                    category = _categoryService.Update<Category, Category, CategoryValidator>(category);
+                    if(int.TryParse(txtId.Text, out var id))
+                    {
+                        var category = _categoryService.GetById<Category>(id);
+                        FormToObject(category);
+                        category = _categoryService.Update<Category, Category, CategoryValidator>(category);
+                    }
                 }
 
                 else

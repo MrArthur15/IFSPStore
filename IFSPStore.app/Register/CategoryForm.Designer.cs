@@ -90,7 +90,7 @@
             txtId.HideSelection = true;
             txtId.Hint = "ID";
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(541, 18);
+            txtId.Location = new Point(439, 18);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
