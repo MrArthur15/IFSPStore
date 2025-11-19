@@ -50,7 +50,10 @@ namespace IFSPStore.app
             }
         }
 
-        
+        private void cityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm<CityForm>();
+        }
 
         private void ShowForm<TFormulario>() where TFormulario : Form
         {

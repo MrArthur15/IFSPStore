@@ -54,7 +54,7 @@ namespace IFSPStore.Repository.Migrations
                     Password = table.Column<string>(type: "varchar(45)", maxLength: 45, nullable: false),
                     Login = table.Column<string>(type: "varchar(45)", maxLength: 45, nullable: false),
                     Email = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
-                    RegistrationDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    RegistrationDate = table.Column<DateTime>(type: "datetime(6)", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
                     LoginDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     Active = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },

@@ -43,6 +43,9 @@ namespace IFSPStore.app
             closeToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             lblUser = new ToolStripStatusLabel();
+            toolStripSeparator1 = new ToolStripSeparator();
+            toolStripSeparator2 = new ToolStripSeparator();
+            toolStripSeparator3 = new ToolStripSeparator();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -58,7 +61,7 @@ namespace IFSPStore.app
             // 
             // regsiterToolStripMenuItem
             // 
-            regsiterToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { userToolStripMenuItem, categoryToolStripMenuItem, productToolStripMenuItem, cityToolStripMenuItem, customerToolStripMenuItem, saleToolStripMenuItem });
+            regsiterToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { userToolStripMenuItem, toolStripSeparator1, categoryToolStripMenuItem, productToolStripMenuItem, toolStripSeparator2, cityToolStripMenuItem, customerToolStripMenuItem, toolStripSeparator3, saleToolStripMenuItem });
             regsiterToolStripMenuItem.Name = "regsiterToolStripMenuItem";
             regsiterToolStripMenuItem.Size = new Size(61, 20);
             regsiterToolStripMenuItem.Text = "Register";
@@ -66,39 +69,40 @@ namespace IFSPStore.app
             // userToolStripMenuItem
             // 
             userToolStripMenuItem.Name = "userToolStripMenuItem";
-            userToolStripMenuItem.Size = new Size(126, 22);
+            userToolStripMenuItem.Size = new Size(180, 22);
             userToolStripMenuItem.Text = "User";
             userToolStripMenuItem.Click += userToolStripMenuItem_Click;
             // 
             // categoryToolStripMenuItem
             // 
             categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
-            categoryToolStripMenuItem.Size = new Size(126, 22);
+            categoryToolStripMenuItem.Size = new Size(180, 22);
             categoryToolStripMenuItem.Text = "Category";
             categoryToolStripMenuItem.Click += categoryToolStripMenuItem_Click;
             // 
             // productToolStripMenuItem
             // 
             productToolStripMenuItem.Name = "productToolStripMenuItem";
-            productToolStripMenuItem.Size = new Size(126, 22);
+            productToolStripMenuItem.Size = new Size(180, 22);
             productToolStripMenuItem.Text = "Product";
             // 
             // cityToolStripMenuItem
             // 
             cityToolStripMenuItem.Name = "cityToolStripMenuItem";
-            cityToolStripMenuItem.Size = new Size(126, 22);
+            cityToolStripMenuItem.Size = new Size(180, 22);
             cityToolStripMenuItem.Text = "City";
+            cityToolStripMenuItem.Click += cityToolStripMenuItem_Click;
             // 
             // customerToolStripMenuItem
             // 
             customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            customerToolStripMenuItem.Size = new Size(126, 22);
+            customerToolStripMenuItem.Size = new Size(180, 22);
             customerToolStripMenuItem.Text = "Customer";
             // 
             // saleToolStripMenuItem
             // 
             saleToolStripMenuItem.Name = "saleToolStripMenuItem";
-            saleToolStripMenuItem.Size = new Size(126, 22);
+            saleToolStripMenuItem.Size = new Size(180, 22);
             saleToolStripMenuItem.Text = "Sale";
             // 
             // reportToolStripMenuItem
@@ -133,6 +137,21 @@ namespace IFSPStore.app
             lblUser.Name = "lblUser";
             lblUser.Size = new Size(36, 17);
             lblUser.Text = "User: ";
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(177, 6);
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(177, 6);
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(177, 6);
             // 
             // MainForm
             // 
@@ -172,5 +191,8 @@ namespace IFSPStore.app
 
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel lblUser;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripSeparator toolStripSeparator3;
     }
 }

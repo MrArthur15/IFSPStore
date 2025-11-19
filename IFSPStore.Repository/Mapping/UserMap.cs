@@ -16,7 +16,7 @@ namespace IFSPStore.Repository.Mapping
             builder.Property(prop => prop.Password).IsRequired().HasMaxLength(45);
             builder.Property(prop => prop.Login).IsRequired().HasMaxLength(45);
             builder.Property(prop => prop.Email).IsRequired().HasMaxLength(100);
-            builder.Property(prop => prop.RegistrationDate).HasDefaultValue(DateTime.Now); ;
+            builder.Property(prop => prop.RegistrationDate).HasDefaultValueSql("CURRENT_TIMESTAMP");
             builder.Property(prop => prop.LoginDate).IsRequired(); ;
             builder.Property(prop => prop.Active);
         }

@@ -172,6 +172,7 @@
             Controls.Add(txtLogin);
             MaximizeBox = false;
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IFSP Store - Login";
             Enter += btnOk_Click;
             ResumeLayout(false);

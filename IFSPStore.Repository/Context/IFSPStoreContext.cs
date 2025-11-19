@@ -6,14 +6,19 @@ namespace IFSPStore.Repository.Context
 {
     public class IFSPStoreContext : DbContext
     {
-        public IFSPStoreContext(DbContextOptions<IFSPStoreContext> op=null) : base(op)
+        public IFSPStoreContext(DbContextOptions<IFSPStoreContext> op = null) : base(op)
         {
-            Database.EnsureCreated();
+           Database.EnsureCreated();
         }
+
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=IFSPStore;user=root;password=");
+           
+            optionsBuilder.UseMySQL("server=localhost;database=IFSPStore2025;user=root;password=");
+            
+           
         }
 
         public DbSet<City> Cities { get; set; }

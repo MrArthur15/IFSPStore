@@ -55,6 +55,7 @@ namespace IFSPStore.app.Infra
             #region Forms
             services.AddTransient<Login, Login>();
             services.AddTransient<CategoryForm, CategoryForm>();
+            services.AddTransient<CityForm, CityForm>();
             services.AddTransient<UserForm, UserForm>();
             #endregion
 
@@ -62,7 +63,8 @@ namespace IFSPStore.app.Infra
                 new MapperConfiguration(
                     config => {
                         config.CreateMap<User, UserViewModel>();
-                        config.CreateMap<Category, CategoryViewModel>(); 
+                        config.CreateMap<Category, CategoryViewModel>();
+                        config.CreateMap<City, CityViewModel>();
                     },
                     NullLoggerFactory.Instance).CreateMapper()
                 );

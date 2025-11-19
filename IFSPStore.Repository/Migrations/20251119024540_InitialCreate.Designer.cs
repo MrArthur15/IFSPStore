@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IFSPStore.Repository.Migrations
 {
     [DbContext(typeof(IFSPStoreContext))]
-    [Migration("20251103212724_InitialCreate")]
+    [Migration("20251119024540_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -220,7 +220,9 @@ namespace IFSPStore.Repository.Migrations
                         .HasColumnType("varchar(45)");
 
                     b.Property<DateTime>("RegistrationDate")
-                        .HasColumnType("datetime(6)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.HasKey("Id");
 
