@@ -30,24 +30,28 @@
         {
             txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             txtName = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            materialComboBox1 = new ReaLTaiizor.Controls.MaterialComboBox();
+            cboStates = new ReaLTaiizor.Controls.MaterialComboBox();
             tabPageRegister.SuspendLayout();
             tabControlRegister.SuspendLayout();
             SuspendLayout();
             // 
             // tabPageRegister
             // 
-            tabPageRegister.Controls.Add(materialComboBox1);
+            tabPageRegister.Controls.Add(cboStates);
             tabPageRegister.Controls.Add(txtId);
             tabPageRegister.Controls.Add(txtName);
-            tabPageRegister.Size = new Size(731, 142);
+            tabPageRegister.Margin = new Padding(3, 4, 3, 4);
+            tabPageRegister.Padding = new Padding(3, 4, 3, 4);
+            tabPageRegister.Size = new Size(731, 120);
             tabPageRegister.Controls.SetChildIndex(txtName, 0);
             tabPageRegister.Controls.SetChildIndex(txtId, 0);
-            tabPageRegister.Controls.SetChildIndex(materialComboBox1, 0);
+            tabPageRegister.Controls.SetChildIndex(cboStates, 0);
             // 
             // tabControlRegister
             // 
-            tabControlRegister.Size = new Size(739, 177);
+            tabControlRegister.Location = new Point(3, 85);
+            tabControlRegister.Margin = new Padding(3, 4, 3, 4);
+            tabControlRegister.Size = new Size(739, 155);
             // 
             // txtId
             // 
@@ -62,7 +66,7 @@
             txtId.HideSelection = true;
             txtId.Hint = "ID";
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(657, 17);
+            txtId.Location = new Point(870, 16);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
@@ -112,28 +116,28 @@
             txtName.TrailingIcon = null;
             txtName.UseSystemPasswordChar = false;
             // 
-            // materialComboBox1
+            // cboStates
             // 
-            materialComboBox1.AutoResize = false;
-            materialComboBox1.BackColor = Color.FromArgb(255, 255, 255);
-            materialComboBox1.Depth = 0;
-            materialComboBox1.DrawMode = DrawMode.OwnerDrawVariable;
-            materialComboBox1.DropDownHeight = 174;
-            materialComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            materialComboBox1.DropDownWidth = 121;
-            materialComboBox1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialComboBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialComboBox1.FormattingEnabled = true;
-            materialComboBox1.IntegralHeight = false;
-            materialComboBox1.ItemHeight = 43;
-            materialComboBox1.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MS", "MT", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
-            materialComboBox1.Location = new Point(530, 16);
-            materialComboBox1.MaxDropDownItems = 4;
-            materialComboBox1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            materialComboBox1.Name = "materialComboBox1";
-            materialComboBox1.Size = new Size(121, 49);
-            materialComboBox1.StartIndex = 0;
-            materialComboBox1.TabIndex = 6;
+            cboStates.AutoResize = false;
+            cboStates.BackColor = Color.FromArgb(255, 255, 255);
+            cboStates.Depth = 0;
+            cboStates.DrawMode = DrawMode.OwnerDrawVariable;
+            cboStates.DropDownHeight = 174;
+            cboStates.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboStates.DropDownWidth = 121;
+            cboStates.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboStates.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboStates.FormattingEnabled = true;
+            cboStates.IntegralHeight = false;
+            cboStates.ItemHeight = 43;
+            cboStates.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MS", "MT", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" });
+            cboStates.Location = new Point(530, 16);
+            cboStates.MaxDropDownItems = 4;
+            cboStates.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboStates.Name = "cboStates";
+            cboStates.Size = new Size(121, 49);
+            cboStates.StartIndex = 0;
+            cboStates.TabIndex = 6;
             // 
             // CityForm
             // 
@@ -141,7 +145,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(745, 244);
             Location = new Point(0, 0);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "CityForm";
+            Padding = new Padding(3, 85, 3, 4);
             Text = "CityForm";
             tabPageRegister.ResumeLayout(false);
             tabControlRegister.ResumeLayout(false);
@@ -152,6 +158,6 @@
 
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtName;
-        private ReaLTaiizor.Controls.MaterialComboBox materialComboBox1;
+        private ReaLTaiizor.Controls.MaterialComboBox cboStates;
     }
 }

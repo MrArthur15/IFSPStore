@@ -20,5 +20,6 @@ namespace IFSPStore.Service.Validatorrs
             RuleFor(e => e.Email)
                 .NotEmpty().WithMessage("O Email é obrigatória!");
         }
+
     }
 }
